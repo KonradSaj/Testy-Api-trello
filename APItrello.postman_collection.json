@@ -1,0 +1,575 @@
+{
+	"info": {
+		"_postman_id": "2f437e68-9fc2-48ab-8de6-91e3e2cb1e53",
+		"name": "trello",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25702786"
+	},
+	"item": [
+		{
+			"name": "Stworzenie nowej tablicy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/?name=test2&key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "test2"
+						},
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuwanie tablicy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f5080093598ba4420f26d7?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f5080093598ba4420f26d7"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f51a42a06b387dd724fed0/lists?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f51a42a06b387dd724fed0",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/cards?idList=63f51a42a06b387dd724fed8&key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5&name=karta4&desc=karta do przeniesienia",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "idList",
+							"value": "63f51a42a06b387dd724fed8"
+						},
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						},
+						{
+							"key": "name",
+							"value": "karta4"
+						},
+						{
+							"key": "desc",
+							"value": "karta do przeniesienia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edycja tablicy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f51a42a06b387dd724fed0?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5&prefs/background=63f5197d9a7b6e76ff889303&name=TestEdytowany",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f51a42a06b387dd724fed0"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						},
+						{
+							"key": "prefs/background",
+							"value": "63f5197d9a7b6e76ff889303"
+						},
+						{
+							"key": "name",
+							"value": "TestEdytowany"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edycja karty",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cover\": {\r\n    \"color\": \"black\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.trello.com/1/cards/63f51abd02bdc31655bc9510?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"cards",
+						"63f51abd02bdc31655bc9510"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stworzenie nowej listy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists?name=Przetrzymane w czasie&idBoard=63f51a42a06b387dd724fed0&key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Przetrzymane w czasie"
+						},
+						{
+							"key": "idBoard",
+							"value": "63f51a42a06b387dd724fed0"
+						},
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a list of a board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f51a42a06b387dd724fed0/lists?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f51a42a06b387dd724fed0",
+						"lists"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get a list of a cards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/lists/63f51a42a06b387dd724fed7/cards?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"lists",
+						"63f51a42a06b387dd724fed7",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a member ti a board",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f51a42a06b387dd724fed0/members/63f4edb28262148f5aee024b?type=observer&key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f51a42a06b387dd724fed0",
+						"members",
+						"63f4edb28262148f5aee024b"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "observer"
+						},
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cards on a board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f51a42a06b387dd724fed0/cards?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f51a42a06b387dd724fed0",
+						"cards"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a member",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/members/KonradSajewicz?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"members",
+						"KonradSajewicz"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "x",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/organizations/63f4f4e2bf7fe333c98f6d56/memberships?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"organizations",
+						"63f4f4e2bf7fe333c98f6d56",
+						"memberships"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get memebership of a board",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f51a42a06b387dd724fed0/memberships?key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f51a42a06b387dd724fed0",
+						"memberships"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dodanie członka przez email",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.trello.com/1/boards/63f51a42a06b387dd724fed0/members?email=qsw21773@zslsz.com&key=b82a5a75c8e5380a6ed1a323d662907b&token=ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"trello",
+						"com"
+					],
+					"path": [
+						"1",
+						"boards",
+						"63f51a42a06b387dd724fed0",
+						"members"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "qsw21773@zslsz.com"
+						},
+						{
+							"key": "key",
+							"value": "b82a5a75c8e5380a6ed1a323d662907b"
+						},
+						{
+							"key": "token",
+							"value": "ATTAb18cfde387eeb875a156edffd653216252382249f208c2c047c10cafbc2042cc864AADA5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
